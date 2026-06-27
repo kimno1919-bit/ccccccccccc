@@ -4,8 +4,10 @@ import { Play } from 'lucide-react';
 import StudentManager from './components/StudentManager';
 import SlotMachine from './components/SlotMachine';
 import SecretMenu from './components/SecretMenu';
+import EthicsGate from './components/EthicsGate';
 
 function App() {
+  const [isGatePassed, setIsGatePassed] = useState(false);
   const [students, setStudents] = useState([]);
   const [secretQueue, setSecretQueue] = useState([]);
   const [winnerCount, setWinnerCount] = useState(1);
@@ -75,6 +77,10 @@ function App() {
       colors: ['#6366f1', '#ec4899', '#10b981', '#f59e0b']
     });
   };
+
+  if (!isGatePassed) {
+    return <EthicsGate onAccept={() => setIsGatePassed(true)} />;
+  }
 
   return (
     <div className="app-container">

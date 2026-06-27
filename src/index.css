@@ -322,3 +322,134 @@ input:focus, select:focus, textarea:focus {
 .modal-close:hover {
   color: var(--text-color);
 }
+
+/* Ethics Gate Styles (Canva Design System) */
+.ethics-gate-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  color: #333333;
+  font-family: 'Inter', sans-serif;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255,255,255,0.5);
+}
+
+.ethics-gate-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.ethics-gate-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #7d2ae8, #00c4cc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.ethics-gate-header p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.ethics-gate-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.ethics-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid #f3f4f6;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ethics-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(125, 42, 232, 0.1);
+  border-color: #e5e7eb;
+}
+
+.ethics-card-sidebar {
+  background: linear-gradient(135deg, #f3e8ff, #e0f2fe);
+  color: #6b21a8;
+  padding: 1.5rem 1rem;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ethics-values {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.ethics-card-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.ethics-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.ethics-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.ethics-gate-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn-canva-primary {
+  background: linear-gradient(135deg, #7d2ae8, #00c4cc);
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px; /* pill shape */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(125, 42, 232, 0.3);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 500px;
+}
+
+.btn-canva-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(125, 42, 232, 0.4);
+}
+
+@media (max-width: 640px) {
+  .ethics-card {
+    flex-direction: column;
+  }
+  .ethics-card-sidebar {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to right, #f3e8ff, #e0f2fe);
+  }
+}
+
